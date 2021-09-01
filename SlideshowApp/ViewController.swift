@@ -9,11 +9,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var ImgBoard: UIImageView!
+    
+    // 画像の読み込み
+    let Image_red = UIImage(named: "image_red.jpg")
+    let Image_blue = UIImage(named: "image_blue.jpg")
+    let Image_orange = UIImage(named: "image_orange.jpg")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+
+        
+        // 初期画像の表示
+        ImgBoard.image = Image_red
     }
 
+    
+    @IBAction func Susumu(_ sender: Any) {
+        
+        ImgBoard.image = Image_blue
+    }
+    
 
+    @IBAction func Modoru(_ sender: Any) {
+        
+        
+    }
+    
+    
+    @IBAction func Saisei_Teishi(_ sender: Any) {
+        
+        
+    }
+    
 }
 

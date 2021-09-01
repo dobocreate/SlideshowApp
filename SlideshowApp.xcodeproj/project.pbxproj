@@ -13,6 +13,10 @@
 		464B1B4F26DF92E3007BA11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464B1B4D26DF92E3007BA11A /* Main.storyboard */; };
 		464B1B5126DF92E4007BA11A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 464B1B5026DF92E4007BA11A /* Assets.xcassets */; };
 		464B1B5426DF92E4007BA11A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464B1B5226DF92E4007BA11A /* LaunchScreen.storyboard */; };
+		464B1B5F26DF9862007BA11A /* image_blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 464B1B5C26DF9862007BA11A /* image_blue.jpg */; };
+		464B1B6026DF9862007BA11A /* image_red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 464B1B5D26DF9862007BA11A /* image_red.jpg */; };
+		464B1B6126DF9862007BA11A /* image_orange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 464B1B5E26DF9862007BA11A /* image_orange.jpg */; };
+		464B1B6426DF9C97007BA11A /* KakudaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B1B6326DF9C97007BA11A /* KakudaiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		464B1B5026DF92E4007BA11A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		464B1B5326DF92E4007BA11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		464B1B5526DF92E4007BA11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		464B1B5C26DF9862007BA11A /* image_blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_blue.jpg; path = ../../../../../Volumes/SONY_64GQX/image_blue.jpg; sourceTree = "<group>"; };
+		464B1B5D26DF9862007BA11A /* image_red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_red.jpg; path = ../../../../../Volumes/SONY_64GQX/image_red.jpg; sourceTree = "<group>"; };
+		464B1B5E26DF9862007BA11A /* image_orange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_orange.jpg; path = ../../../../../Volumes/SONY_64GQX/image_orange.jpg; sourceTree = "<group>"; };
+		464B1B6326DF9C97007BA11A /* KakudaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakudaiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,13 @@
 		464B1B4626DF92E3007BA11A /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
+				464B1B5C26DF9862007BA11A /* image_blue.jpg */,
+				464B1B5E26DF9862007BA11A /* image_orange.jpg */,
+				464B1B5D26DF9862007BA11A /* image_red.jpg */,
 				464B1B4726DF92E3007BA11A /* AppDelegate.swift */,
 				464B1B4926DF92E3007BA11A /* SceneDelegate.swift */,
 				464B1B4B26DF92E3007BA11A /* ViewController.swift */,
+				464B1B6326DF9C97007BA11A /* KakudaiViewController.swift */,
 				464B1B4D26DF92E3007BA11A /* Main.storyboard */,
 				464B1B5026DF92E4007BA11A /* Assets.xcassets */,
 				464B1B5226DF92E4007BA11A /* LaunchScreen.storyboard */,
@@ -124,9 +136,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464B1B6026DF9862007BA11A /* image_red.jpg in Resources */,
 				464B1B5426DF92E4007BA11A /* LaunchScreen.storyboard in Resources */,
 				464B1B5126DF92E4007BA11A /* Assets.xcassets in Resources */,
+				464B1B6126DF9862007BA11A /* image_orange.jpg in Resources */,
 				464B1B4F26DF92E3007BA11A /* Main.storyboard in Resources */,
+				464B1B5F26DF9862007BA11A /* image_blue.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +155,7 @@
 				464B1B4C26DF92E3007BA11A /* ViewController.swift in Sources */,
 				464B1B4826DF92E3007BA11A /* AppDelegate.swift in Sources */,
 				464B1B4A26DF92E3007BA11A /* SceneDelegate.swift in Sources */,
+				464B1B6426DF9C97007BA11A /* KakudaiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
