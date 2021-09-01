@@ -22,12 +22,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-
+        let singleTap = UITapGestureRecognizer(target:self, action: #selector(ViewController.tapSingle(sender:)))
+        
+        //view.addGestureRecognizer(singleTap)
+        ImgBoard.addGestureRecognizer(singleTap)
         
         // 初期画像の表示
         ImgBoard.image = Image_red
     }
 
+    @objc func tapSingle(sender: UITapGestureRecognizer){
+        
+        print("single")
+    }
+    
     
     @IBAction func Susumu(_ sender: Any) {
         
