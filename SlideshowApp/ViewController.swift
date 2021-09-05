@@ -17,91 +17,98 @@ class ViewController: UIViewController {
     let Image_blue = UIImage(named: "image_blue.jpg")
     let Image_orange = UIImage(named: "image_orange.jpg")
     
-    // 画像を配列に入れる
+    // 配列に画像を格納する
     var value_image: [UIImage] = [UIImage(named: "image_red.jpg")!,
                                   UIImage(named: "image_blue.jpg")!,
                                   UIImage(named: "image_orange.jpg")!]
     
     // timer
     var timer: Timer!
-    var timer_sec: Int = 0
-    
-    // flag
-    var flag: Int = 0
+    var img_count: Int = 0
     
     @objc func updateTimer(_ timer: Timer){
         
-        if timer_sec >= 3 {
-            timer_sec = 0
+        img_count += 1
+        
+        if img_count >= 3 {
+            img_count = 0
         }
         
         // 画像を表示する
-        ImgBoard.image = value_image[timer_sec]
+        ImgBoard.image = value_image[img_count]
         
-        print("timer_sec = \(timer_sec)")
-        
-        self.timer_sec += 1
+        print("img_count = \(img_count)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // 起動時に実行される
         
         // tapを検知できるようにする設定
         ImgBoard.isUserInteractionEnabled = true
         
         // 初期画像の表示
         //ImgBoard.image = Image_red
-        ImgBoard.image = value_image[1]
-        
-        
-        
+        ImgBoard.image = value_image[0]
     }
 
     @IBAction func tapSingle2(_ sender: Any) {
         
-        ImgBoard.image = Image_orange
+        //ImgBoard.image = Image_orange
         
-        //let kakudaiViewController:KakudaiViewController = segue.destination as! KakudaiViewController
+        /*
+        // 遷移する前に画像を代入する
+        let kakudaiViewController:KakudaiViewController = segue.destination as! KakudaiViewController
         
-        //KakudaiViewController.kakudai_image = Image_blue
+        KakudaiViewController.kakudai_image = Image_blue
+        */
         
+        // segue id:"toScond"に遷移する
         self.performSegue(withIdentifier: "toSecond", sender: self)
         
         print("tapされました")
     }
     
+    // 画面の遷移前に呼び出される関数
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?){
+        
+        if segue.identifier == "toSecond" {
+            
+            let kakudaiView = segue.destination as! KakudaiViewController
+            
+            kakudaiView.kakudai_image = value_image[img_count]
+        }
+    }
     
     @IBAction func Susumu(_ sender: Any) {
         
-        timer_sec += 1
+        img_count += 1
         
-        if timer_sec >= 3 {
-            timer_sec = 0
+        if img_count >= 3 {
+            img_count = 0
         }
         
         // 画像を表示する
-        ImgBoard.image = value_image[timer_sec]
+        ImgBoard.image = value_image[img_count]
         
-        print("進むボタンがpushされました")
+        print("進むボタンがpushされました。img_count = \(img_count)")
     }
     
 
     @IBAction func Modoru(_ sender: Any) {
         
-        
-        
-        if timer_sec == 0 {
-            timer_sec = 2
+        if img_count == 0 {
+            img_count = 2
         }
         else {
-            timer_sec -= 1
+            img_count -= 1
         }
         
         // 画像を表示する
-        ImgBoard.image = value_image[timer_sec]
+        ImgBoard.image = value_image[img_count]
         
-        print("戻るボタンがpushされました")
+        print("戻るボタンがpushされました。img_count = \(img_count)")
     }
     
     
@@ -121,6 +128,7 @@ class ViewController: UIViewController {
     @IBAction func unwind2(_ segue: UIStoryboardSegue){
         
         // 戻って来たときに呼ばれる
+        print("戻った")
         
     }
     

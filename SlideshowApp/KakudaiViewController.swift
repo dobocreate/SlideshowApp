@@ -18,9 +18,9 @@ class KakudaiViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let Image_orange = UIImage(named: "image_orange.jpg")
+        //let Image_orange = UIImage(named: "image_orange.jpg")
         
-        kakudai_ImgBoard.image = Image_orange //kakudai_image
+        kakudai_ImgBoard.image = kakudai_image
     }
     
 
