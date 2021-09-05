@@ -9,10 +9,18 @@ import UIKit
 
 class KakudaiViewController: UIViewController {
 
+    var kakudai_image:UIImage!
+    
+    @IBOutlet weak var kakudai_ImgBoard: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let Image_orange = UIImage(named: "image_orange.jpg")
+        
+        kakudai_ImgBoard.image = Image_orange //kakudai_image
     }
     
 

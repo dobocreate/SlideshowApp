@@ -18,6 +18,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O09-1Q-lQ2">
                                 <rect key="frame" x="0.0" y="147" width="428" height="295"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="17t-Yc-24k" appends="YES" id="3jD-6x-9Zx"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM3-eg-iDl">
                                 <rect key="frame" x="50" y="497" width="70" height="30"/>
@@ -54,9 +58,6 @@
                                 <rect key="frame" x="183" y="109" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="2qt-u5-5zP" kind="show" id="6mn-vi-kur"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -74,11 +75,17 @@
                     </view>
                     <connections>
                         <outlet property="ImgBoard" destination="O09-1Q-lQ2" id="maw-FQ-8Wu"/>
+                        <segue destination="2qt-u5-5zP" kind="show" identifier="toSecond" id="9Pj-cJ-Hdu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="17t-Yc-24k">
+                    <connections>
+                        <action selector="tapSingle2:" destination="BYZ-38-t0r" id="91h-rb-xbT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="466.82242990654203" y="51.835853131749467"/>
+            <point key="canvasLocation" x="527" y="51"/>
         </scene>
         <!--Kakudai View Controller-->
         <scene sceneID="UIZ-r0-lNW">
@@ -92,6 +99,9 @@
                                 <rect key="frame" x="199" y="421" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="Oag-Cj-MIT" kind="unwind" unwindAction="unwind2:" id="Gmz-Wy-rkx"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58s-Oy-S8F">
                                 <rect key="frame" x="0.0" y="97" width="428" height="288"/>
@@ -102,8 +112,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Dv-Ao-byo"/>
+                    <connections>
+                        <outlet property="kakudai_ImgBoard" destination="58s-Oy-S8F" id="CQX-w7-jMc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-f1-w6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Oag-Cj-MIT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1235.0467289719625" y="50.53995680345573"/>
         </scene>
