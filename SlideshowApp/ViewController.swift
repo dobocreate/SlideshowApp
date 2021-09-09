@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ImgBoard: UIImageView!
     
+    @IBOutlet weak var Susumu_Button: UIButton!
+    @IBOutlet weak var Modoru_Button: UIButton!
+    @IBOutlet weak var Saisei_Teishi_Label: UIButton!
+    
     // 画像の読み込み
     let Image_red = UIImage(named: "image_red.jpg")
     let Image_blue = UIImage(named: "image_blue.jpg")
@@ -25,6 +29,8 @@ class ViewController: UIViewController {
     // timer
     var timer: Timer!
     var img_count: Int = 0
+    
+    //var saisei: Int = 0
     
     @objc func updateTimer(_ timer: Timer){
         
@@ -51,6 +57,9 @@ class ViewController: UIViewController {
         // 初期画像の表示
         //ImgBoard.image = Image_red
         ImgBoard.image = value_image[0]
+        
+        // ボタンのタイトルを設定
+        Saisei_Teishi_Label.setTitle("再生", for:.normal)
     }
 
     @IBAction func tapSingle2(_ sender: Any) {
@@ -117,11 +126,18 @@ class ViewController: UIViewController {
         if self.timer == nil {      // timerが実行されていない場合
             // タイマーの実行（２秒ごと）
             timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            
+            // ボタンを無効化する
+            Susumu_Button.isEnabled = false         // 無効化
+            
+            Saisei_Teishi_Label.setTitle("停止", for:.normal)
         }
         else {                    // timerが実行されている場合
             // タイマーを停止する
             self.timer.invalidate()
             self.timer = nil
+            
+            Saisei_Teishi_Label.setTitle("再生", for:.normal)
         }
     }
     

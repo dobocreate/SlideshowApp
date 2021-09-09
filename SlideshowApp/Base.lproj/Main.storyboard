@@ -75,6 +75,9 @@
                     </view>
                     <connections>
                         <outlet property="ImgBoard" destination="O09-1Q-lQ2" id="maw-FQ-8Wu"/>
+                        <outlet property="Modoru_Button" destination="bv9-hB-Pyc" id="y3B-Nf-LLm"/>
+                        <outlet property="Saisei_Teishi_Label" destination="rCf-0K-exw" id="5yU-d6-YIh"/>
+                        <outlet property="Susumu_Button" destination="BM3-eg-iDl" id="mCi-QM-PCW"/>
                         <segue destination="2qt-u5-5zP" kind="show" identifier="toSecond" id="9Pj-cJ-Hdu"/>
                     </connections>
                 </viewController>
