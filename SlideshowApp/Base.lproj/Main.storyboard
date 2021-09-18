@@ -17,60 +17,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O09-1Q-lQ2">
-                                <rect key="frame" x="0.0" y="147" width="428" height="295"/>
+                                <rect key="frame" x="164" y="147" width="100" height="295"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="yXk-28-vz6"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="17t-Yc-24k" appends="YES" id="3jD-6x-9Zx"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM3-eg-iDl">
-                                <rect key="frame" x="50" y="497" width="70" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="74c-nP-qZQ"/>
-                                </constraints>
-                                <state key="normal" title="進む"/>
-                                <connections>
-                                    <action selector="Susumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xh-xC-GBt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bv9-hB-Pyc">
-                                <rect key="frame" x="170" y="497" width="70" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="npT-AF-VFm"/>
-                                </constraints>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <action selector="Modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUw-84-vlT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCf-0K-exw">
-                                <rect key="frame" x="308" y="497" width="70" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="B3u-C8-sq8"/>
-                                </constraints>
-                                <state key="normal" title="再生/停止"/>
-                                <connections>
-                                    <action selector="Saisei_Teishi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsv-lR-V8Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0g-Cq-QA8">
-                                <rect key="frame" x="183" y="109" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FHy-fq-3sb">
+                                <rect key="frame" x="98" y="497" width="232" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM3-eg-iDl">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="進む"/>
+                                        <connections>
+                                            <action selector="Susumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xh-xC-GBt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bv9-hB-Pyc">
+                                        <rect key="frame" x="81" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="Modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUw-84-vlT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCf-0K-exw">
+                                        <rect key="frame" x="162" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="B3u-C8-sq8"/>
+                                        </constraints>
+                                        <state key="normal" title="再生/停止"/>
+                                        <connections>
+                                            <action selector="Saisei_Teishi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsv-lR-V8Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rCf-0K-exw" firstAttribute="top" secondItem="O09-1Q-lQ2" secondAttribute="bottom" constant="50" id="95b-yc-uYj"/>
-                            <constraint firstItem="bv9-hB-Pyc" firstAttribute="leading" secondItem="BM3-eg-iDl" secondAttribute="trailing" constant="50" id="9Kw-QE-dOJ"/>
-                            <constraint firstItem="BM3-eg-iDl" firstAttribute="top" secondItem="O09-1Q-lQ2" secondAttribute="bottom" constant="50" id="QNp-Dq-jcL"/>
-                            <constraint firstItem="O09-1Q-lQ2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="RSg-dj-VTR"/>
-                            <constraint firstItem="bv9-hB-Pyc" firstAttribute="top" secondItem="O09-1Q-lQ2" secondAttribute="bottom" constant="50" id="S4c-2P-U1U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rCf-0K-exw" secondAttribute="trailing" constant="50" id="Sxb-Gd-pu1"/>
-                            <constraint firstItem="O09-1Q-lQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zwm-QL-kdM"/>
-                            <constraint firstItem="O09-1Q-lQ2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iSN-Ak-tU4"/>
-                            <constraint firstItem="BM3-eg-iDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lTV-7m-lVN"/>
+                            <constraint firstItem="O09-1Q-lQ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9d-LF-Q2G"/>
+                            <constraint firstItem="O09-1Q-lQ2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="W0n-pj-IDm"/>
+                            <constraint firstItem="FHy-fq-3sb" firstAttribute="top" secondItem="O09-1Q-lQ2" secondAttribute="bottom" constant="55" id="aF1-mL-C3X"/>
+                            <constraint firstItem="FHy-fq-3sb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXI-E5-R1b"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,34 +85,43 @@
         <!--Kakudai View Controller-->
         <scene sceneID="UIZ-r0-lNW">
             <objects>
+                <exit id="Oag-Cj-MIT" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-f1-w6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="2qt-u5-5zP" customClass="KakudaiViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6HL-hf-kwd">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-qF-8wx">
-                                <rect key="frame" x="199" y="421" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58s-Oy-S8F">
+                                <rect key="frame" x="0.0" y="97" width="428" height="288"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-qF-8wx">
+                                <rect key="frame" x="189" y="448" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IDd-Aa-TFz"/>
+                                    <constraint firstAttribute="height" constant="30" id="XM4-aM-h8I"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="Oag-Cj-MIT" kind="unwind" unwindAction="unwind2:" id="Gmz-Wy-rkx"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58s-Oy-S8F">
-                                <rect key="frame" x="0.0" y="97" width="428" height="288"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cox-NB-WcS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dcw-qF-8wx" firstAttribute="top" secondItem="58s-Oy-S8F" secondAttribute="bottom" constant="55" id="4fk-qZ-IvZ"/>
+                            <constraint firstItem="58s-Oy-S8F" firstAttribute="trailing" secondItem="cox-NB-WcS" secondAttribute="trailing" id="bqg-Bz-yhQ"/>
+                            <constraint firstItem="58s-Oy-S8F" firstAttribute="top" secondItem="cox-NB-WcS" secondAttribute="top" constant="90" id="c8O-AY-KcJ"/>
+                            <constraint firstItem="Dcw-qF-8wx" firstAttribute="centerX" secondItem="6HL-hf-kwd" secondAttribute="centerX" id="jeC-zv-soU"/>
+                            <constraint firstItem="58s-Oy-S8F" firstAttribute="leading" secondItem="cox-NB-WcS" secondAttribute="leading" id="vnW-Le-2GH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Dv-Ao-byo"/>
                     <connections>
                         <outlet property="kakudai_ImgBoard" destination="58s-Oy-S8F" id="CQX-w7-jMc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-f1-w6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Oag-Cj-MIT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1235.0467289719625" y="50.53995680345573"/>
         </scene>

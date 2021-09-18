@@ -16,10 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var Modoru_Button: UIButton!
     @IBOutlet weak var Saisei_Teishi_Label: UIButton!
     
+    /*
     // 画像の読み込み
     let Image_red = UIImage(named: "image_red.jpg")
     let Image_blue = UIImage(named: "image_blue.jpg")
     let Image_orange = UIImage(named: "image_orange.jpg")
+    */
     
     // 配列に画像を格納する
     var value_image: [UIImage] = [UIImage(named: "image_red.jpg")!,
@@ -53,6 +55,11 @@ class ViewController: UIViewController {
         
         // tapを検知できるようにする設定
         ImgBoard.isUserInteractionEnabled = true
+        
+        let rect:CGRect = CGRect(x:0, y:0, width:100, height:100)
+        
+        ImgBoard.frame = rect
+        
         
         // 初期画像の表示
         //ImgBoard.image = Image_red
@@ -98,6 +105,8 @@ class ViewController: UIViewController {
             img_count = 0
         }
         
+
+        
         // 画像を表示する
         ImgBoard.image = value_image[img_count]
         
@@ -129,6 +138,7 @@ class ViewController: UIViewController {
             
             // ボタンを無効化する
             Susumu_Button.isEnabled = false         // 無効化
+            Modoru_Button.isEnabled = false         // 無効化
             
             Saisei_Teishi_Label.setTitle("停止", for:.normal)
         }
@@ -136,6 +146,10 @@ class ViewController: UIViewController {
             // タイマーを停止する
             self.timer.invalidate()
             self.timer = nil
+            
+            // ボタンを有効化する
+            Susumu_Button.isEnabled = true         // 有効化
+            Modoru_Button.isEnabled = true         // 有効化
             
             Saisei_Teishi_Label.setTitle("再生", for:.normal)
         }
