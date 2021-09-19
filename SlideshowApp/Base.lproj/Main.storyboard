@@ -16,18 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O09-1Q-lQ2">
-                                <rect key="frame" x="164" y="147" width="100" height="295"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O09-1Q-lQ2">
+                                <rect key="frame" x="164" y="144" width="100" height="300"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="PZa-z1-AZk"/>
                                     <constraint firstAttribute="width" constant="100" id="yXk-28-vz6"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="17t-Yc-24k" appends="YES" id="3jD-6x-9Zx"/>
                                 </connections>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FHy-fq-3sb">
-                                <rect key="frame" x="98" y="497" width="232" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FHy-fq-3sb">
+                                <rect key="frame" x="98" y="499" width="232" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM3-eg-iDl">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
@@ -85,18 +86,19 @@
         <!--Kakudai View Controller-->
         <scene sceneID="UIZ-r0-lNW">
             <objects>
-                <exit id="Oag-Cj-MIT" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-f1-w6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="2qt-u5-5zP" customClass="KakudaiViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6HL-hf-kwd">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58s-Oy-S8F">
-                                <rect key="frame" x="0.0" y="97" width="428" height="288"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58s-Oy-S8F">
+                                <rect key="frame" x="0.0" y="90" width="428" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Ncg-nx-eTb"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-qF-8wx">
-                                <rect key="frame" x="189" y="448" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-qF-8wx">
+                                <rect key="frame" x="189" y="445" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IDd-Aa-TFz"/>
                                     <constraint firstAttribute="height" constant="30" id="XM4-aM-h8I"/>
@@ -122,6 +124,8 @@
                         <outlet property="kakudai_ImgBoard" destination="58s-Oy-S8F" id="CQX-w7-jMc"/>
                     </connections>
                 </viewController>
+                <exit id="Oag-Cj-MIT" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-f1-w6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1235.0467289719625" y="50.53995680345573"/>
         </scene>
