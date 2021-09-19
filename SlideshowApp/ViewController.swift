@@ -94,7 +94,23 @@ class ViewController: UIViewController {
             let kakudaiView = segue.destination as! KakudaiViewController
             
             kakudaiView.kakudai_image = value_image[img_count]
+            
+            if self.timer != nil {      // timerが実行されていない場合
+            
+                // タイマーを停止する
+                self.timer.invalidate()
+                self.timer = nil
+                
+                // ボタンを有効化する
+                Susumu_Button.isEnabled = true         // 有効化
+                Modoru_Button.isEnabled = true         // 有効化
+                
+                Saisei_Teishi_Label.setTitle("再生", for:.normal)
+                
+            }
         }
+        
+        
     }
     
     @IBAction func Susumu(_ sender: Any) {
@@ -104,8 +120,6 @@ class ViewController: UIViewController {
         if img_count >= 3 {
             img_count = 0
         }
-        
-
         
         // 画像を表示する
         ImgBoard.image = value_image[img_count]
